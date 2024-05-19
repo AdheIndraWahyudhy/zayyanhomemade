@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Produk</title>
+    <link rel="stylesheet" href="./src/css/output.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        .header-bg {
+            background-image: url('./asset/img/sarden.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            background-attachment: fixed;
+            position: relative;
+            z-index: 0;
+        }
+        .header-bg::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.8); /* Adjust the darkness level here */
+            z-index: -1;
+        }
+        .parallax {
+            background-image: url('./asset/img/sardenzayyan.png');
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+            background-attachment: fixed;
+        }
+        .navbar-transition {
+            transition: transform 0.3s ease-in-out;
+        }
+        .navbar-hidden {
+            transform: translateY(-100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Navbar -->
+    <nav id="navbar" class="bg-white shadow-md fixed w-full z-10 navbar-transition">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold">Zayyan HomeMade</a>
+            <button class="md:hidden text-gray-500 focus:outline-none" id="navbar-toggle">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+            <div class="hidden md:flex space-x-4" id="navbar-menu">
+                <a href="#header" class="hover:text-blue-500">Home</a>
+                <a href="#products" class="hover:text-blue-500">Produk</a>
+                <a href="#about" class="hover:text-blue-500">Tentang Kami</a>
+                <a href="#contact" class="hover:text-blue-500">Kontak</a>
+            </div>
+        </div>
+        <div class="hidden p-5" id="navbar-mobile-menu">
+            <a href="#header" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:rounded-lg">Home</a>
+            <a href="#products" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:rounded-lg">Produk</a>
+            <a href="#about" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:rounded-lg">Tentang Kami</a>
+            <a href="#contact" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:rounded-lg">Kontak</a>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header id="header" class="header-bg flex items-center justify-center text-white">
+        <div class="text-center" data-aos="fade-down">
+            <h1 class="text-5xl font-bold mb-4">Zayyan HomeMade</h1>
+            <p class="text-xl mb-8">Produk yang akan mengubah hidup Anda</p>
+            <a href="https://shopee.co.id/" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Beli Sekarang di Shopee</a>
+        </div>
+    </header>
+
+    <!-- Parallax Section -->
+    <div class="parallax"></div>
+
+    <!-- Products -->
+    <section class="py-16 bg-white" id="products" data-aos="fade-up">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-8 text-center">Produk Kami</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                    <img src="./asset/img/product1.jpg" alt="Product 1" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-2xl font-bold mb-2">Produk 1</h3>
+                        <p class="text-gray-700 mb-4">Deskripsi singkat tentang produk 1.</p>
+                        <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Detail Produk</a>
+                    </div>
+                </div>
+                <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                    <img src="./asset/img/product2.jpg" alt="Product 2" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-2xl font-bold mb-2">Produk 2</h3>
+                        <p class="text-gray-700 mb-4">Deskripsi singkat tentang produk 2.</p>
+                        <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Detail Produk</a>
+                    </div>
+                </div>
+                <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                    <img src="./asset/img/product3.jpg" alt="Product 3" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-2xl font-bold mb-2">Produk 3</h3>
+                        <p class="text-gray-700 mb-4">Deskripsi singkat tentang produk 3.</p>
+                        <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Detail Produk</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parallax Section -->
+    <div class="parallax"></div>
+
+    <!-- About -->
+    <section class="py-16 bg-white container" id="about" data-aos="fade-right">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-8 text-center">Tentang Produk Kami</h2>
+            <p class="text-lg leading-relaxed text-gray-700">
+                Produk kami adalah solusi terbaik untuk kebutuhan Anda. Dibuat dengan bahan berkualitas tinggi dan melalui proses yang ketat, kami memastikan bahwa Anda mendapatkan yang terbaik. Produk ini dirancang untuk memberikan kenyamanan dan efisiensi dalam penggunaan sehari-hari.
+            </p>
+        </div>
+    </section>
+
+    <!-- Parallax Section -->
+    <div class="parallax"></div>
+
+    <!-- Contact -->
+    <section class="py-16 bg-gray-100" id="contact" >
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-8 text-center">Kontak Pemilik</h2>
+            <div class="flex flex-col items-center">
+                <p class="text-lg leading-relaxed text-gray-700 mb-4">Hubungi kami untuk informasi lebih lanjut</p>
+                <a href="mailto:owner@example.com" class="text-blue-500 hover:underline">owner@example.com</a>
+                <a href="tel:+1234567890" class="text-blue-500 hover:underline">+1234567890</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <a href="#" class="text-2xl font-bold mb-4 md:mb-0">Zayyan HomeMade</a>
+                <div class="space-x-4">
+                    <a href="#header" class="hover:text-blue-500">Home</a>
+                    <a href="#products" class="hover:text-blue-500">Produk</a>
+                    <a href="#about" class="hover:text-blue-500">Tentang Kami</a>
+                    <a href="#contact" class="hover:text-blue-500">Kontak</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        document.getElementById('navbar-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('navbar-mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Navbar show/hide on scroll with animation
+        let lastScrollTop = 0;
+        const navbar = document.getElementById('navbar');
+
+        window.addEventListener('scroll', function() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > lastScrollTop) {
+                // Downscroll
+                navbar.classList.add('navbar-hidden');
+            } else {
+                // Upscroll
+                navbar.classList.remove('navbar-hidden');
+            }
+
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+        });
+    </script>
+</body>
+</html>
