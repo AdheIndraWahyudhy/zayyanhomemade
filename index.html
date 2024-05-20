@@ -7,6 +7,7 @@
     <link rel="icon" href="./asset/img/logozayyanhomemade.png" type="image/x-icon" />
     <link rel="stylesheet" href="./src/css/output.css">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <style>
         .header-bg {
             background-image: url('./asset/img/sarden.jpg');
@@ -24,14 +25,14 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.8); /* Adjust the darkness level here */
+            background: rgba(0, 0, 0, 0.8);
             z-index: -1;
         }
         .parallax {
             background-image: url('./asset/img/sardenzayyan.png');
             background-size: cover;
             background-position: center;
-            height: 50vh;
+            height: 30vh;
             background-attachment: fixed;
         }
         .navbar-transition {
@@ -110,6 +111,30 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Swiper Carousel -->
+            <div class="mt-16">
+                <h2 class="text-4xl font-bold mb-8 text-center">Dokumentasi</h2>
+                <div class="swiper-container relative w-full max-w-4xl mx-auto overflow-hidden">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="./asset/product/pastel.jpg" alt="Documentation 1" class="w-full max-h-72 object-cover">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./asset/product/pisangkipas.jpg" alt="Documentation 2" class="w-full max-h-72 object-cover">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./asset/product/sarden.jpg" alt="Documentation 3" class="w-full max-h-72 object-cover">
+                        </div>
+                        <!-- Add more slides as needed -->
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination absolute bottom-4 w-full text-center"></div>
+                    <!-- Add Navigation -->
+                    <div class="swiper-button-next absolute top-1/2 right-4 transform -translate-y-1/2"></div>
+                    <div class="swiper-button-prev absolute top-1/2 left-4 transform -translate-y-1/2"></div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -157,31 +182,46 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
-        AOS.init();
-    </script>
-    <script>
-        document.getElementById('navbar-toggle').addEventListener('click', function() {
-            const mobileMenu = document.getElementById('navbar-mobile-menu');
-            mobileMenu.classList.toggle('hidden');
-        });
+        document.addEventListener('DOMContentLoaded', function() {
+            const swiper = new Swiper('.swiper-container', {
+                loop: true,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
 
-        // Navbar show/hide on scroll with animation
-        let lastScrollTop = 0;
-        const navbar = document.getElementById('navbar');
+            AOS.init();
 
-        window.addEventListener('scroll', function() {
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            document.getElementById('navbar-toggle').addEventListener('click', function() {
+                const mobileMenu = document.getElementById('navbar-mobile-menu');
+                mobileMenu.classList.toggle('hidden');
+            });
 
-            if (scrollTop > lastScrollTop) {
-                // Downscroll
-                navbar.classList.add('navbar-hidden');
-            } else {
-                // Upscroll
-                navbar.classList.remove('navbar-hidden');
-            }
+            let lastScrollTop = 0;
+            const navbar = document.getElementById('navbar');
 
-            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+            window.addEventListener('scroll', function() {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+                if (scrollTop > lastScrollTop) {
+                    navbar.classList.add('navbar-hidden');
+                } else {
+                    navbar.classList.remove('navbar-hidden');
+                }
+
+                lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+            });
         });
     </script>
 </body>
