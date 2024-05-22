@@ -8,53 +8,13 @@
     <link rel="stylesheet" href="./src/css/output.css">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <style>
-        .header-bg {
-            background-image: url('./asset/img/sarden.jpg');
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-            background-attachment: fixed;
-            position: relative;
-            z-index: 0;
-        }
-        .header-bg::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.8);
-            z-index: -1;
-        }
-        .parallax {
-            background-image: url('./asset/img/sardenzayyan.png');
-            background-size: cover;
-            background-position: center;
-            height: 30vh;
-            background-attachment: fixed;
-        }
-        .navbar-transition {
-            transition: transform 0.3s ease-in-out;
-        }
-        .navbar-hidden {
-            transform: translateY(-100%);
-        }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        .loader {
-            border-top-color: #3498db; /* Blue */
-            animation: spin 1s linear infinite;
-        }
-    </style>
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-100">
     <div id="loadingScreen" class="fixed inset-0 bg-white flex flex-col justify-center items-center z-50">
         <div class="loader ease-linear rounded-full border-8 border-t-8 border-gray-200 h-32 w-32 mb-4"></div>
-        <p class="text-lg text-gray-700">Loading images, please wait...</p>
+        <p class="text-lg text-gray-700">Memuat gambar, Mohon tunggu...</p>
     </div>
     <!-- Navbar -->
     <nav id="navbar" class="bg-white shadow-md fixed w-full z-10 navbar-transition">
@@ -86,7 +46,7 @@
         <div class="text-center" data-aos="fade-down">
             <h1 class="text-5xl font-bold mb-4">Zayyan HomeMade</h1>
             <p class="text-xl mb-8">Produk yang akan mengubah hidup Anda</p>
-            <a href="https://shopee.co.id/" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Beli Sekarang di Shopee</a>
+            <a href="#products" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Produk Kami</a>
         </div>
     </header>
 
@@ -141,6 +101,43 @@
                         <div class="swiper-slide">
                             <img src="./asset/dokumentasi/a5a9e834.jpg" alt="Documentation 3" class=" h-full image-to-load object-cover">
                         </div>
+                        <div class="swiper-slide">
+                            <img src="./asset/dokumentasi/image-065.jpg" alt="Documentation 3" class=" h-full image-to-load object-cover">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./asset/dokumentasi/image-079.jpg" alt="Documentation 3" class=" h-full image-to-load object-cover">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./asset/dokumentasi/image-083.jpg" alt="Documentation 3" class=" h-full image-to-load object-cover">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./asset/dokumentasi/image-098.jpg" alt="Documentation 3" class=" h-full image-to-load object-cover">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./asset/dokumentasi/image-190.jpg" alt="Documentation 3" class=" h-full image-to-load object-cover">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./asset/dokumentasi/image-214.jpg" alt="Documentation 3" class=" h-full image-to-load object-cover">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./asset/dokumentasi/image-272.jpg" alt="Documentation 3" class=" h-full image-to-load object-cover">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./asset/dokumentasi/image-292.jpg" alt="Documentation 3" class=" h-full image-to-load object-cover">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./asset/dokumentasi/image-321.jpg" alt="Documentation 3" class=" h-full image-to-load object-cover">
+                        </div>
+                        
+                        <div class="swiper-slide">
+                            <img src="./asset/dokumentasi/image-379.jpg" alt="Documentation 3" class=" h-full image-to-load object-cover">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./asset/dokumentasi/image-381.jpg" alt="Documentation 3" class=" h-full image-to-load object-cover">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./asset/dokumentasi/image-384.jpg" alt="Documentation 3" class=" h-full image-to-load object-cover">
+                        </div>
                         <!-- Add more slides as needed -->
                     </div>
                     <!-- Add Pagination -->
@@ -179,10 +176,39 @@
         <div class="px-4 flex flex-col justify-start">
             <h2 class="text-4xl font-bold mb-8 mt-8 text-center">Kontak Pemilik</h2>
             <div class="flex flex-col items-center">
-                <p class="text-lg leading-relaxed text-gray-700 mb-4">Hubungi kami untuk informasi lebih lanjut</p>
-                <a href="mailto:owner@example.com" class="text-blue-500 hover:underline">owner@example.com</a>
+                <p class="text-lg text-center leading-relaxed text-gray-700 mb-4">Hubungi kami untuk informasi lebih lanjut</p>
+                <a href="mailto:zayyanhomemade@gmail.com" class="text-blue-500 hover:underline">zayyanhomemade@gmail.com</a>
                 <a href="https://wa.me/6285213373859" class="text-blue-500 hover:underline">+62-852-1337-3859</a>
             </div>
+        </div>
+    </section>
+    <section class="container bg-white p-10 my-10 rounded-xl shadow-xl max-w-lg w-full">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Contact Us</h2>
+        <div class="space-y-5">
+            <a href="mailto:zayyanhomemade@gmail.com" class="flex items-center p-4 bg-slate-300 text-black hover:text-white rounded-lg shadow-inner hover:shadow-md hover:bg-blue-700 transition duration-300">
+                <i class="fas fa-envelope fa-lg mr-4"></i>
+                <span class="text-lg">Email Us</span>
+            </a>
+            <a href="https://wa.me/6285213373859" class="flex items-center p-4 bg-slate-300 text-black hover:text-white rounded-lg shadow-inner hover:shadow-md hover:bg-green-600 transition duration-300">
+                <i class="fab fa-whatsapp fa-lg mr-4"></i>
+                <span class="text-lg">WhatsApp</span>
+            </a>
+            <a href="https://www.instagram.com/zayyanhomemade/" class="flex items-center p-4 bg-slate-300 text-black hover:text-white rounded-lg shadow-inner hover:shadow-md hover:bg-pink-600 transition duration-300">
+                <i class="fab fa-instagram fa-lg mr-4"></i>
+                <span class="text-lg">Instagram</span>
+            </a>
+            <a href="https://www.facebook.com/zayyanhomemade" class="flex items-center p-4 bg-slate-300 text-black hover:text-white rounded-lg shadow-inner hover:shadow-md hover:bg-blue-900 transition duration-300">
+                <i class="fab fa-facebook fa-lg mr-4"></i>
+                <span class="text-lg">Facebook</span>
+            </a>
+            <a href="https://gofood.link/yourprofile" class="flex items-center p-4 bg-slate-300 text-black hover:text-white rounded-lg shadow-inner hover:shadow-md hover:bg-red-600 transition duration-300">
+                <i class="fa-solid fa-shop mr-4"></i>
+                <span class="text-lg">Order on GoFood</span>
+            </a>
+            <a href="https://grabfood.link/yourprofile" class="flex items-center p-4 bg-slate-300 text-black hover:text-white rounded-lg shadow-inner hover:shadow-md hover:bg-yellow-600 transition duration-300">
+                <i class="fa-solid fa-shop mr-4"></i>
+                <span class="text-lg">Order on GrabFood</span>
+            </a>
         </div>
     </section>
     
@@ -205,68 +231,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const swiper = new Swiper('.swiper-container', {
-                loop: true,
-                autoplay: {
-                    delay: 3000,
-                    disableOnInteraction: false,
-                },
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-            });
-
-            AOS.init();
-
-            document.getElementById('navbar-toggle').addEventListener('click', function() {
-                const mobileMenu = document.getElementById('navbar-mobile-menu');
-                mobileMenu.classList.toggle('hidden');
-            });
-
-            let lastScrollTop = 0;
-            const navbar = document.getElementById('navbar');
-
-            window.addEventListener('scroll', function() {
-                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-                if (scrollTop > lastScrollTop) {
-                    navbar.classList.add('navbar-hidden');
-                } else {
-                    navbar.classList.remove('navbar-hidden');
-                }
-
-                lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-            });
-        });
-        document.addEventListener('DOMContentLoaded', function () {
-            const images = document.querySelectorAll('.image-to-load');
-            let imagesLoaded = 0;
-
-            function checkImagesLoaded() {
-                imagesLoaded++;
-                if (imagesLoaded === images.length) {
-                    document.getElementById('loadingScreen').classList.add('hidden');
-                    document.querySelector('.content').classList.remove('hidden');
-                }
-            }
-
-            images.forEach(image => {
-                if (image.complete) {
-                    checkImagesLoaded();
-                } else {
-                    image.addEventListener('load', checkImagesLoaded);
-                    image.addEventListener('error', checkImagesLoaded); // in case of error, still call the function
-                }
-            });
-        });
-
-    </script>
+    <script src="./src/js/script.js"></script>
 </body>
 </html>

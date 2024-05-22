@@ -1,3 +1,45 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.header-bg {
+    background-image: url('./../../asset/img/sarden.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 0;
+}
+.header-bg::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: -1;
+}
+.parallax {
+    background-image: url('./../../asset/img/logozayyanhomemade.png');
+    background-size: cover;
+    background-position: center;
+    height: 30vh;
+    background-attachment: fixed;
+}
+.navbar-transition {
+    transition: transform 0.3s ease-in-out;
+}
+.navbar-hidden {
+    transform: translateY(-100%);
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.loader {
+    border-top-color: #3498db; /* Blue */
+    animation: spin 1s linear infinite;
+}
