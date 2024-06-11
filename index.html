@@ -12,10 +12,14 @@
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
         .hover-effect:hover {
             transform: scale(1.1);
             box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
         }
+        /* Tambahkan sedikit transformasi pada card */
     </style>
 
     <script>
@@ -70,28 +74,54 @@
 
     <!-- Header -->
     <header id="header" class="header-bg flex items-center justify-center text-white">
-        <div class="text-center" data-aos="fade-down">
+        <div class="text-center flex flex-col items-center justify-center" data-aos="fade-down">
             <h1 class="text-5xl font-bold mb-4 ">Zayyan HomeMade</h1>
-            <p class="text-xl mb-8 max-w-lg">Haii sobat sehat, salam sehat semua
+            <p class="text-xl mb-8 max-w-[80%] md:p-5">Haii sobat sehat, salam sehat semua
                 Kami Zayyan Homemade Bersama ini memperkenalkan diri
-                Zayyan Homemade berdiri pada bulan agustus 2019 
+                Zayyan Homemade berdiri pada bulan agustus 2019
                 Didirikan oleh Nurhasni Bersama Abdul Syukur.
                 Kami menyiapkan makanan homemade yang sehat dan kami sajikan untuk konsumen-konsumen kami,
                 Termasuk anda.</p>
-            <a href="#products" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Produk
+            <a href="#products" class="hover:brightness-110 hover:animate-pulse font-bold py-3 px-6 rounded-full bg-indigo-500 shadow-lg shadow-indigo-500/50 text-white">Produk
                 Kami</a>
         </div>
     </header>
 
     <!-- Parallax Section -->
-    <div class="parallax"></div>
+    <!-- <div class="parallax"></div> -->
+
+
+    <div class="my-10 p-5 flex flex-col md:flex-row justify-center items-center">
+
+        <div data-aos="zoom-in-left" class="relative z-0">
+            <img src="./asset/img/sardenzayyan.png" alt="" class="h-72 w-72 drop-shadow-2xl object-cover  rounded-lg md:w-52" >
+        </div>
+        <div class="mt-[-30px] md:ml-[-30px] bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden drop-shadow-2xl     max-w-lg" data-aos="zoom-in-down">
+            <div class="p-4">
+                <h2 class="text-xl font-semibold mb-2 text-white">Kenapa kami mengatakan makana  sehat?</h2>
+                <p class="text-sm mb-4 text-white">
+                    Karena Kami konsen terhadap Kesehatan keluarga juga konsumen-konsumen yang mengkonsumsi prosuk-produk kami yaitu, Zayyan Homemade. Produk-produk Zayyan Homemade dibuat dengan menggunakan bahan-bahan segar dan alami tidak menggunakan MSG (penyedap buatan) dan tanpa menggunakan perasa dan pengawet buatan, jadi Insyaallah sehat dan tidak was-was untuk kita hidangkan Bersama keluarga yang kita cintai.
+                </p>
+
+                <!-- <div class="flex justify-end space-x-4">
+                    <button class="duration-300 bg-black/0 hover:bg-black/25 text-white font-bold py-2 px-4 rounded">
+                        Accept
+                    </button>
+                    <button class="duration-300 bg-black/0 hover:bg-black/25 text-white font-bold py-2 px-4 rounded">
+                        Decline
+                    </button>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
 
     <!-- Products -->
-    <section class="py-16 bg-white" id="products" data-aos="fade-up">
+    <section class="py-16 bg-white drop-shadow-2xl" id="products" data-aos="fade-up">
         <div class="container mx-auto px-4">
             <h2 class="text-4xl font-bold mb-8 text-center">Produk Kami</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white shadow-md rounded-lg overflow-hidden" data-aos="fade-right">
+                <div class="bg-white shadow-md rounded-lg overflow-hidden" data-aos="zoom-in-right">
                     <img src="./asset/product/sarden_frozen.jpg" alt="Product 1"
                         class="image-to-load w-full h-48 object-cover" />
                     <div class="p-4">
@@ -104,7 +134,7 @@
                             WA</a>
                     </div>
                 </div>
-                <div class="bg-white shadow-md rounded-lg overflow-hidden" data-aos="fade-right">
+                <div class="bg-white shadow-md rounded-lg overflow-hidden" data-aos="zoom-in-right">
                     <img src="./asset/product/rice_bowl_sarden.jpg" alt="Product 1"
                         class="image-to-load w-full h-48 object-cover" />
                     <div class="p-4">
@@ -118,7 +148,7 @@
                             WA</a>
                     </div>
                 </div>
-                <div class="bg-white shadow-md rounded-lg overflow-hidden" data-aos="fade-right">
+                <div class="bg-white shadow-md rounded-lg overflow-hidden" data-aos="zoom-in-right">
                     <img src="./asset/product/pisang_kipas.jpg" alt="Product 2"
                         class="image-to-load w-full h-48 object-cover" />
                     <div class="p-4">
@@ -131,7 +161,7 @@
                             WA</a>
                     </div>
                 </div>
-                <div class="bg-white shadow-md rounded-lg overflow-hidden" data-aos="fade-right">
+                <div class="bg-white shadow-md rounded-lg overflow-hidden" data-aos="zoom-in-right">
                     <img src="./asset/product/pisang_coklat.jpg" alt="Product 3"
                         class="image-to-load w-full h-48 object-cover" />
                     <div class="p-4">
@@ -144,7 +174,7 @@
                             WA</a>
                     </div>
                 </div>
-                <div class="bg-white shadow-md rounded-lg overflow-hidden" data-aos="fade-right">
+                <div class="bg-white shadow-md rounded-lg overflow-hidden" data-aos="zoom-in-right">
                     <img src="./asset/product/ayam_katsu.jpg" alt="Product 3"
                         class="image-to-load w-full h-48 object-cover" />
                     <div class="p-4">
@@ -158,7 +188,7 @@
                             WA</a>
                     </div>
                 </div>
-                <div class="bg-white shadow-md rounded-lg overflow-hidden" data-aos="fade-right">
+                <div class="bg-white shadow-md rounded-lg overflow-hidden" data-aos="zoom-in-right">
                     <img src="./asset/product/rice_bowl_ayam_geprek.jpg" alt="Product 3"
                         class="image-to-load w-full h-48 object-cover" />
                     <div class="p-4">
@@ -177,7 +207,7 @@
             <!-- Kue kering -->
             <h2 class="text-4xl font-bold my-8 text-center">Kue Kering</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white shadow-md rounded-lg overflow-hidden" data-aos="fade-right">
+                <div class="bg-white shadow-md rounded-lg overflow-hidden" data-aos="zoom-in-right">
                     <div class="w-full aspect-w-1 aspect-h-1">
                         <img src="./asset/product/goodtime_cookies.png" alt="Product 3"
                             class="object-cover w-full h-full" />
@@ -190,7 +220,7 @@
                             WA</a>
                     </div>
                 </div>
-                <div class="bg-white shadow-md rounded-lg overflow-hidden" data-aos="fade-right">
+                <div class="bg-white shadow-md rounded-lg overflow-hidden" data-aos="zoom-in-right">
                     <div class="w-full aspect-w-1 aspect-h-1">
                         <img src="./asset/product/kastengel.png" alt="Product 3" class="object-cover w-full h-full" />
                     </div>
@@ -202,7 +232,7 @@
                             WA</a>
                     </div>
                 </div>
-                <div class="bg-white shadow-md rounded-lg overflow-hidden" data-aos="fade-right">
+                <div class="bg-white shadow-md rounded-lg overflow-hidden" data-aos="zoom-in-right">
                     <div class="w-full aspect-w-1 aspect-h-1">
                         <img src="./asset/product/marmer_gores.png" alt="Product 3"
                             class="object-cover w-full h-full" />
@@ -215,7 +245,7 @@
                             WA</a>
                     </div>
                 </div>
-                <div class="bg-white shadow-md rounded-lg overflow-hidden" data-aos="fade-right">
+                <div class="bg-white shadow-md rounded-lg overflow-hidden" data-aos="zoom-in-right">
                     <div class="w-full aspect-w-1 aspect-h-1">
                         <img src="./asset/product/nastar.png" alt="Product 3" class="object-cover w-full h-full" />
                     </div>
@@ -227,7 +257,7 @@
                             WA</a>
                     </div>
                 </div>
-                <div class="bg-white shadow-md rounded-lg overflow-hidden" data-aos="fade-right">
+                <div class="bg-white shadow-md rounded-lg overflow-hidden" data-aos="zoom-in-right">
                     <div class="w-full aspect-w-1 aspect-h-1">
                         <img src="./asset/product/nastar_coklat.png" alt="Product 3"
                             class="object-cover w-full h-full" />
@@ -240,7 +270,7 @@
                             WA</a>
                     </div>
                 </div>
-                <div class="bg-white shadow-md rounded-lg overflow-hidden" data-aos="fade-right">
+                <div class="bg-white shadow-md rounded-lg overflow-hidden" data-aos="zoom-in-right">
                     <div class="w-full aspect-w-1 aspect-h-1">
                         <img src="./asset/product/putri_salju.png" alt="Product 3" class="object-cover w-full h-full" />
                     </div>
@@ -252,7 +282,7 @@
                             WA</a>
                     </div>
                 </div>
-                <div class="bg-white shadow-md rounded-lg overflow-hidden" data-aos="fade-right">
+                <div class="bg-white shadow-md rounded-lg overflow-hidden" data-aos="zoom-in-right">
                     <div class="w-full aspect-w-1 aspect-h-1">
                         <img src="./asset/product/putri_salju_keju.png" alt="Product 3"
                             class="object-cover w-full h-full" />
@@ -265,7 +295,7 @@
                             WA</a>
                     </div>
                 </div>
-                <div class="bg-white shadow-md rounded-lg overflow-hidden" data-aos="fade-right">
+                <div class="bg-white shadow-md rounded-lg overflow-hidden" data-aos="zoom-in-right">
                     <div class="w-full aspect-w-1 aspect-h-1">
                         <img src="./asset/product/sagu_keju.png" alt="Product 3" class="object-cover w-full h-full" />
                     </div>
@@ -282,72 +312,72 @@
             <!-- Swiper Carousel -->
             <div class="mt-16">
                 <h2 class="text-4xl font-bold mb-8 text-center">Dokumentasi</h2>
-                <div class="swiper-container relative w-full max-w-4xl mx-auto overflow-hidden" data-aos="fade-right">
-                    <div class="swiper-wrapper">
+                <div class="swiper-container relative w-full max-w-4xl mx-auto overflow-hidden" data-aos="zoom-in-down">
+                    <div class="swiper-wrapper ">
                         <div class="swiper-slide">
                             <img src="./asset/dokumentasi/0cfa5516.jpg" alt="Documentation 1"
-                                class="w-full max-h-svh image-to-load object-cover" />
+                                class="w-full max-h-svh image-to-load object-cover rounded-xl" />
                         </div>
                         <div class="swiper-slide">
                             <img src="./asset/dokumentasi/1e7c7782.jpg" alt="Documentation 2"
-                                class="w-full max-h-svh image-to-load object-cover" />
+                                class="w-full max-h-svh image-to-load object-cover rounded-xl" />
                         </div>
                         <div class="swiper-slide">
                             <img src="./asset/dokumentasi/f687cc3b.jpg" alt="Documentation 3"
-                                class="w-full max-h-svh image-to-load object-cover" />
+                                class="w-full max-h-svh image-to-load object-cover rounded-xl" />
                         </div>
                         <div class="swiper-slide">
                             <img src="./asset/dokumentasi/a5a9e834.jpg" alt="Documentation 3"
-                                class="w-full max-h-svh image-to-load object-cover" />
+                                class="w-full max-h-svh image-to-load object-cover rounded-xl" />
                         </div>
                         <div class="swiper-slide">
                             <img src="./asset/dokumentasi/image-065.jpg" alt="Documentation 3"
-                                class="w-full max-h-svh image-to-load object-cover" />
+                                class="w-full max-h-svh image-to-load object-cover rounded-xl" />
                         </div>
                         <div class="swiper-slide">
                             <img src="./asset/dokumentasi/image-079.jpg" alt="Documentation 3"
-                                class="w-full max-h-svh image-to-load object-cover" />
+                                class="w-full max-h-svh image-to-load object-cover rounded-xl" />
                         </div>
                         <div class="swiper-slide">
                             <img src="./asset/dokumentasi/image-083.jpg" alt="Documentation 3"
-                                class="w-full max-h-svh image-to-load object-cover" />
+                                class="w-full max-h-svh image-to-load object-cover rounded-xl" />
                         </div>
                         <div class="swiper-slide">
                             <img src="./asset/dokumentasi/image-098.jpg" alt="Documentation 3"
-                                class="w-full max-h-svh image-to-load object-cover" />
+                                class="w-full max-h-svh image-to-load object-cover rounded-xl" />
                         </div>
                         <div class="swiper-slide">
                             <img src="./asset/dokumentasi/image-190.jpg" alt="Documentation 3"
-                                class="w-full max-h-svh image-to-load object-cover" />
+                                class="w-full max-h-svh image-to-load object-cover rounded-xl" />
                         </div>
                         <div class="swiper-slide">
                             <img src="./asset/dokumentasi/image-214.jpg" alt="Documentation 3"
-                                class="w-full max-h-svh image-to-load object-cover" />
+                                class="w-full max-h-svh image-to-load object-cover rounded-xl" />
                         </div>
                         <div class="swiper-slide">
                             <img src="./asset/dokumentasi/image-272.jpg" alt="Documentation 3"
-                                class="w-full max-h-svh image-to-load object-cover" />
+                                class="w-full max-h-svh image-to-load object-cover rounded-xl" />
                         </div>
                         <div class="swiper-slide">
                             <img src="./asset/dokumentasi/image-292.jpg" alt="Documentation 3"
-                                class="w-full max-h-svh image-to-load object-cover" />
+                                class="w-full max-h-svh image-to-load object-cover rounded-xl" />
                         </div>
                         <div class="swiper-slide">
                             <img src="./asset/dokumentasi/image-321.jpg" alt="Documentation 3"
-                                class="w-full max-h-svh image-to-load object-cover" />
+                                class="w-full max-h-svh image-to-load object-cover rounded-xl" />
                         </div>
 
                         <div class="swiper-slide">
                             <img src="./asset/dokumentasi/image-379.jpg" alt="Documentation 3"
-                                class="w-full max-h-svh image-to-load object-cover" />
+                                class="w-full max-h-svh image-to-load object-cover rounded-xl" />
                         </div>
                         <div class="swiper-slide">
                             <img src="./asset/dokumentasi/image-381.jpg" alt="Documentation 3"
-                                class="w-full max-h-svh image-to-load object-cover" />
+                                class="w-full max-h-svh image-to-load object-cover rounded-xl" />
                         </div>
                         <div class="swiper-slide">
                             <img src="./asset/dokumentasi/image-384.jpg" alt="Documentation 3"
-                                class="w-full max-h-svh image-to-load object-cover" />
+                                class="w-full max-h-svh image-to-load object-cover rounded-xl" />
                         </div>
                         <!-- Add more slides as needed -->
                     </div>
@@ -365,7 +395,7 @@
     <!-- <div class="parallax"></div> -->
 
     <!-- About -->
-    <section class="py-16 bg-white container" id="about" data-aos="fade-right">
+    <section class="py-16 bg-white container my-10 rounded-lg drop-shadow-2xl   " id="about" data-aos="zoom-in-up">
         <div class="container mx-auto px-4">
             <h2 class="text-4xl font-bold mb-8 text-center">Tentang Kami</h2>
             <p class="text-lg text-center leading-relaxed text-gray-700">
@@ -424,8 +454,10 @@
                     class="text-blue-500 hover:underline">zayyanhomemade@gmail.com</a>
                 <a href="https://wa.me/6285213373859" class="text-blue-500 hover:underline">+62-852-1337-3859</a>
             </div>
+
         </div>
     </section>
+
     <section class="container bg-white p-10 my-10 rounded-xl shadow-xl max-w-lg w-full">
         <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">
             Sosial Media
@@ -466,14 +498,14 @@
             </a>
         </div>
     </section>
-    <div class="fixed bottom-0 right-0 mb-4 mr-4 p-4 bg-green-700 text-white rounded-full shadow-lg">
-        <a href="">
+    <div class="z-10 fixed bottom-0 right-0 mb-4 mr-4 p-4 bg-green-700 text-white rounded-full drop-shadow-2xl shadow-lime-950">
+        <a href="https://wa.me/6285213373859">
             <img src="./asset/img/wa.svg" alt="" />
         </a>
     </div>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8">
+    <footer class="bg-gradient-to-r from-blue-400 to-indigo-500 text-white py-8">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <a href="#" class="text-2xl font-bold mb-4 md:mb-0">Zayyan HomeMade</a>
