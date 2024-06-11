@@ -58,3 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+var typed = new Typed('#element', {
+    strings: ["Haii sobat sehat, salam sehat semua Kami Zayyan Homemade Bersama ini memperkenalkan diri Zayyan Homemade berdiri pada bulan agustus 2019 Didirikan oleh Nurhasni Bersama Abdul Syukur. Kami menyiapkan makanan homemade yang sehat dan kami sajikan untuk konsumen-konsumen kami, Termasuk anda."],
+    typeSpeed: 50,
+});
