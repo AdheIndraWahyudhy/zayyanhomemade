@@ -1,22 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Zayyan Homemade | Food & Cookies</title>
     <link rel="icon" href="./asset/img/logozayyanhomemade.png" type="image/x-icon" />
-    <link rel="stylesheet" href="./src/css/output.css">
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./src/css/output.css" />
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
     <style>
         .hover-effect:hover {
-          transform: scale(1.1);
-          box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+            transform: scale(1.1);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
         }
-      </style>
+    </style>
+
+    <script>
+        // Nonaktifkan klik kanan
+        document.addEventListener("contextmenu", (event) =>
+            event.preventDefault()
+        );
+
+        // Nonaktifkan shortcut DevTools
+        document.addEventListener("keydown", (event) => {
+            if (
+                event.key === "F12" ||
+                (event.ctrlKey && event.shiftKey && event.key === "I")
+            ) {
+                event.preventDefault();
+            }
+        });
+    </script>
 </head>
+
 <body class="bg-gray-100">
     <div id="loadingScreen" class="fixed inset-0 bg-white flex flex-col justify-center items-center z-50">
         <div class="loader ease-linear rounded-full border-8 border-t-8 border-gray-200 h-32 w-32 mb-4"></div>
@@ -25,11 +44,13 @@
     <!-- Navbar -->
     <nav id="navbar" class="bg-white shadow-md fixed w-full z-10 navbar-transition content">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <img src="./asset/img/logozayyanhomemade.png" alt="logozayyanhomemade" class="w-8 shadow-lg rounded-full">
+            <img src="./asset/img/logozayyanhomemade.png" alt="logozayyanhomemade" class="w-8 shadow-lg rounded-full" />
             <a href="#" class="text-2xl font-bold">Zayyan HomeMade</a>
             <button class="md:hidden text-gray-500 focus:outline-none" id="navbar-toggle">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
                 </svg>
             </button>
             <div class="hidden md:flex space-x-4" id="navbar-menu">
@@ -50,9 +71,15 @@
     <!-- Header -->
     <header id="header" class="header-bg flex items-center justify-center text-white">
         <div class="text-center" data-aos="fade-down">
-            <h1 class="text-5xl font-bold mb-4">Zayyan HomeMade</h1>
-            <p class="text-xl mb-8">Produk tanpa pengawet dan tanpa MSG</p>
-            <a href="#products" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Produk Kami</a>
+            <h1 class="text-5xl font-bold mb-4 ">Zayyan HomeMade</h1>
+            <p class="text-xl mb-8 max-w-lg">Haii sobat sehat, salam sehat semua
+                Kami Zayyan Homemade Bersama ini memperkenalkan diri
+                Zayyan Homemade berdiri pada bulan agustus 2019 
+                Didirikan oleh Nurhasni Bersama Abdul Syukur.
+                Kami menyiapkan makanan homemade yang sehat dan kami sajikan untuk konsumen-konsumen kami,
+                Termasuk anda.</p>
+            <a href="#products" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Produk
+                Kami</a>
         </div>
     </header>
 
@@ -65,51 +92,84 @@
             <h2 class="text-4xl font-bold mb-8 text-center">Produk Kami</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="bg-white shadow-md rounded-lg overflow-hidden" data-aos="fade-right">
-                    <img src="./asset/product/sarden_frozen.jpg" alt="Product 1" class="image-to-load w-full h-48 object-cover">
+                    <img src="./asset/product/sarden_frozen.jpg" alt="Product 1"
+                        class="image-to-load w-full h-48 object-cover" />
                     <div class="p-4">
                         <h3 class="text-2xl font-bold mb-2">Sarden Frozen</h3>
-                        <p class="text-gray-700 mb-4">Sarden dalam saus tomat yang sudah matang dan dibekukan.</p>
-                        <a href="https://wa.me/6285213373859?text=Assalamualaikum%2C%20saya%20ingin%20memesan%20sarden" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Pesan Melalui WA</a>
+                        <p class="text-gray-700 mb-4">
+                            Sarden dalam saus tomat yang sudah matang dan dibekukan.
+                        </p>
+                        <a href="https://wa.me/6285213373859?text=Assalamualaikum%2C%20saya%20ingin%20memesan%20sarden"
+                            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Pesan Melalui
+                            WA</a>
                     </div>
                 </div>
                 <div class="bg-white shadow-md rounded-lg overflow-hidden" data-aos="fade-right">
-                    <img src="./asset/product/rice_bowl_sarden.jpg" alt="Product 1" class="image-to-load w-full h-48 object-cover">
+                    <img src="./asset/product/rice_bowl_sarden.jpg" alt="Product 1"
+                        class="image-to-load w-full h-48 object-cover" />
                     <div class="p-4">
                         <h3 class="text-2xl font-bold mb-2">Rice Bowl Sarden</h3>
-                        <p class="text-gray-700 mb-4">Sarden yang disajikan dalam bentuk rice bowl dengan tambahan kemangi, tomat, dan timun.</p>
-                        <a href="https://wa.me/6285213373859?text=Assalamualaikum%2C%20saya%20ingin%20memesan%20Rice%20Bowl%20Sarden" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Pesan Melalui WA</a>
+                        <p class="text-gray-700 mb-4">
+                            Sarden yang disajikan dalam bentuk rice bowl dengan tambahan
+                            kemangi, tomat, dan timun.
+                        </p>
+                        <a href="https://wa.me/6285213373859?text=Assalamualaikum%2C%20saya%20ingin%20memesan%20Rice%20Bowl%20Sarden"
+                            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Pesan Melalui
+                            WA</a>
                     </div>
                 </div>
                 <div class="bg-white shadow-md rounded-lg overflow-hidden" data-aos="fade-right">
-                    <img src="./asset/product/pisang_kipas.jpg" alt="Product 2" class="image-to-load w-full h-48 object-cover">
+                    <img src="./asset/product/pisang_kipas.jpg" alt="Product 2"
+                        class="image-to-load w-full h-48 object-cover" />
                     <div class="p-4">
                         <h3 class="text-2xl font-bold mb-2">Pisang Kipas</h3>
-                        <p class="text-gray-700 mb-4">Pisang kipas yang tersedia dalam bentuk frozen dan siap santap.</p>
-                        <a href="https://wa.me/6285213373859?text=Assalamualaikum%2C%20saya%20ingin%20memesan%20Pisang%20Kipas" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Pesan Melalui WA</a>
+                        <p class="text-gray-700 mb-4">
+                            Pisang kipas yang tersedia dalam bentuk frozen dan siap santap.
+                        </p>
+                        <a href="https://wa.me/6285213373859?text=Assalamualaikum%2C%20saya%20ingin%20memesan%20Pisang%20Kipas"
+                            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Pesan Melalui
+                            WA</a>
                     </div>
                 </div>
                 <div class="bg-white shadow-md rounded-lg overflow-hidden" data-aos="fade-right">
-                    <img src="./asset/product/pisang_coklat.jpg" alt="Product 3" class="image-to-load w-full h-48 object-cover">
+                    <img src="./asset/product/pisang_coklat.jpg" alt="Product 3"
+                        class="image-to-load w-full h-48 object-cover" />
                     <div class="p-4">
                         <h3 class="text-2xl font-bold mb-2">Pisang Coklat</h3>
-                        <p class="text-gray-700 mb-4">Pisang berisi coklat yang lumer dengan toping keju</p>
-                        <a href="https://wa.me/6285213373859?text=Assalamualaikum%2C%20saya%20ingin%20memesan%20Pisang%20Coklat" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Pesan Melalui WA</a>
+                        <p class="text-gray-700 mb-4">
+                            Pisang berisi coklat yang lumer dengan toping keju
+                        </p>
+                        <a href="https://wa.me/6285213373859?text=Assalamualaikum%2C%20saya%20ingin%20memesan%20Pisang%20Coklat"
+                            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Pesan Melalui
+                            WA</a>
                     </div>
                 </div>
                 <div class="bg-white shadow-md rounded-lg overflow-hidden" data-aos="fade-right">
-                    <img src="./asset/product/ayam_katsu.jpg" alt="Product 3" class="image-to-load w-full h-48 object-cover">
+                    <img src="./asset/product/ayam_katsu.jpg" alt="Product 3"
+                        class="image-to-load w-full h-48 object-cover" />
                     <div class="p-4">
                         <h3 class="text-2xl font-bold mb-2">Chicken Katsu</h3>
-                        <p class="text-gray-700 mb-4">Rice Bowl Chicken Katsu dengan tambahan sambal, kemangi, tomat, dan timun.</p>
-                        <a href="https://wa.me/6285213373859?text=Assalamualaikum%2C%20saya%20ingin%20memesan%20Chicken%20Katsu" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Pesan Melalui WA</a>
+                        <p class="text-gray-700 mb-4">
+                            Rice Bowl Chicken Katsu dengan tambahan sambal, kemangi, tomat,
+                            dan timun.
+                        </p>
+                        <a href="https://wa.me/6285213373859?text=Assalamualaikum%2C%20saya%20ingin%20memesan%20Chicken%20Katsu"
+                            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Pesan Melalui
+                            WA</a>
                     </div>
                 </div>
                 <div class="bg-white shadow-md rounded-lg overflow-hidden" data-aos="fade-right">
-                    <img src="./asset/product/rice_bowl_ayam_geprek.jpg" alt="Product 3" class="image-to-load w-full h-48 object-cover">
+                    <img src="./asset/product/rice_bowl_ayam_geprek.jpg" alt="Product 3"
+                        class="image-to-load w-full h-48 object-cover" />
                     <div class="p-4">
                         <h3 class="text-2xl font-bold mb-2">Rice Bowl Ayam Geprek</h3>
-                        <p class="text-gray-700 mb-4">Ayam geprek yang disajikan dalam bentuk rice bowl dengan tambahan sambal, kemangi, tomat, dan timun.</p>
-                        <a href="https://wa.me/6285213373859?text=Assalamualaikum%2C%20saya%20ingin%20memesan%20Rice%20Bowl%20Ayam%20Geprek" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Pesan Melalui WA</a>
+                        <p class="text-gray-700 mb-4">
+                            Ayam geprek yang disajikan dalam bentuk rice bowl dengan
+                            tambahan sambal, kemangi, tomat, dan timun.
+                        </p>
+                        <a href="https://wa.me/6285213373859?text=Assalamualaikum%2C%20saya%20ingin%20memesan%20Rice%20Bowl%20Ayam%20Geprek"
+                            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Pesan Melalui
+                            WA</a>
                     </div>
                 </div>
             </div>
@@ -119,82 +179,102 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="bg-white shadow-md rounded-lg overflow-hidden" data-aos="fade-right">
                     <div class="w-full aspect-w-1 aspect-h-1">
-                        <img src="./asset/product/goodtime_cookies.png" alt="Product 3" class="object-cover w-full h-full">
+                        <img src="./asset/product/goodtime_cookies.png" alt="Product 3"
+                            class="object-cover w-full h-full" />
                     </div>
                     <div class="p-4">
                         <h3 class="text-2xl font-bold mb-2">Goodtime Cookies</h3>
                         <p class="text-gray-700 mb-4">Kue Kering</p>
-                        <a href="https://wa.me/6285213373859?text=Assalamualaikum%2C%20saya%20ingin%20memesan%20Goodtime%20Cookies" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Pesan Melalui WA</a>
+                        <a href="https://wa.me/6285213373859?text=Assalamualaikum%2C%20saya%20ingin%20memesan%20Goodtime%20Cookies"
+                            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Pesan Melalui
+                            WA</a>
                     </div>
                 </div>
                 <div class="bg-white shadow-md rounded-lg overflow-hidden" data-aos="fade-right">
                     <div class="w-full aspect-w-1 aspect-h-1">
-                        <img src="./asset/product/kastengel.png" alt="Product 3" class="object-cover w-full h-full">
+                        <img src="./asset/product/kastengel.png" alt="Product 3" class="object-cover w-full h-full" />
                     </div>
                     <div class="p-4">
                         <h3 class="text-2xl font-bold mb-2">Kastengel</h3>
                         <p class="text-gray-700 mb-4">Kue Kering</p>
-                        <a href="https://wa.me/6285213373859?text=Assalamualaikum%2C%20saya%20ingin%20memesan%Kastengel" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Pesan Melalui WA</a>
+                        <a href="https://wa.me/6285213373859?text=Assalamualaikum%2C%20saya%20ingin%20memesan%Kastengel"
+                            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Pesan Melalui
+                            WA</a>
                     </div>
                 </div>
                 <div class="bg-white shadow-md rounded-lg overflow-hidden" data-aos="fade-right">
                     <div class="w-full aspect-w-1 aspect-h-1">
-                        <img src="./asset/product/marmer_gores.png" alt="Product 3" class="object-cover w-full h-full">
+                        <img src="./asset/product/marmer_gores.png" alt="Product 3"
+                            class="object-cover w-full h-full" />
                     </div>
                     <div class="p-4">
                         <h3 class="text-2xl font-bold mb-2">Marmer Gores</h3>
                         <p class="text-gray-700 mb-4">Kue Kering</p>
-                        <a href="https://wa.me/6285213373859?text=Assalamualaikum%2C%20saya%20ingin%20memesan%20Marmer%20Gores" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Pesan Melalui WA</a>
+                        <a href="https://wa.me/6285213373859?text=Assalamualaikum%2C%20saya%20ingin%20memesan%20Marmer%20Gores"
+                            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Pesan Melalui
+                            WA</a>
                     </div>
                 </div>
                 <div class="bg-white shadow-md rounded-lg overflow-hidden" data-aos="fade-right">
                     <div class="w-full aspect-w-1 aspect-h-1">
-                        <img src="./asset/product/nastar.png" alt="Product 3" class="object-cover w-full h-full">
+                        <img src="./asset/product/nastar.png" alt="Product 3" class="object-cover w-full h-full" />
                     </div>
                     <div class="p-4">
                         <h3 class="text-2xl font-bold mb-2">Nastar</h3>
                         <p class="text-gray-700 mb-4">Kue Kering</p>
-                        <a href="https://wa.me/6285213373859?text=Assalamualaikum%2C%20saya%20ingin%20memesan%20Nastar" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Pesan Melalui WA</a>
+                        <a href="https://wa.me/6285213373859?text=Assalamualaikum%2C%20saya%20ingin%20memesan%20Nastar"
+                            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Pesan Melalui
+                            WA</a>
                     </div>
                 </div>
                 <div class="bg-white shadow-md rounded-lg overflow-hidden" data-aos="fade-right">
                     <div class="w-full aspect-w-1 aspect-h-1">
-                        <img src="./asset/product/nastar_coklat.png" alt="Product 3" class="object-cover w-full h-full">
+                        <img src="./asset/product/nastar_coklat.png" alt="Product 3"
+                            class="object-cover w-full h-full" />
                     </div>
                     <div class="p-4">
                         <h3 class="text-2xl font-bold mb-2">Nastar Coklat</h3>
                         <p class="text-gray-700 mb-4">Kue Kering</p>
-                        <a href="https://wa.me/6285213373859?text=Assalamualaikum%2C%20saya%20ingin%20memesan%20Rice%20Nastar%20Coklat" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Pesan Melalui WA</a>
+                        <a href="https://wa.me/6285213373859?text=Assalamualaikum%2C%20saya%20ingin%20memesan%20Rice%20Nastar%20Coklat"
+                            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Pesan Melalui
+                            WA</a>
                     </div>
                 </div>
                 <div class="bg-white shadow-md rounded-lg overflow-hidden" data-aos="fade-right">
                     <div class="w-full aspect-w-1 aspect-h-1">
-                        <img src="./asset/product/putri_salju.png" alt="Product 3" class="object-cover w-full h-full">
+                        <img src="./asset/product/putri_salju.png" alt="Product 3" class="object-cover w-full h-full" />
                     </div>
                     <div class="p-4">
                         <h3 class="text-2xl font-bold mb-2">Putri Salju</h3>
                         <p class="text-gray-700 mb-4">Kue Kering</p>
-                        <a href="https://wa.me/6285213373859?text=Assalamualaikum%2C%20saya%20ingin%20memesan%20Rice%20Putri%20Salju" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Pesan Melalui WA</a>
+                        <a href="https://wa.me/6285213373859?text=Assalamualaikum%2C%20saya%20ingin%20memesan%20Rice%20Putri%20Salju"
+                            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Pesan Melalui
+                            WA</a>
                     </div>
                 </div>
                 <div class="bg-white shadow-md rounded-lg overflow-hidden" data-aos="fade-right">
                     <div class="w-full aspect-w-1 aspect-h-1">
-                        <img src="./asset/product/putri_salju_keju.png" alt="Product 3" class="object-cover w-full h-full">
+                        <img src="./asset/product/putri_salju_keju.png" alt="Product 3"
+                            class="object-cover w-full h-full" />
                     </div>
                     <div class="p-4">
                         <h3 class="text-2xl font-bold mb-2">Putri Salju Keju</h3>
                         <p class="text-gray-700 mb-4">Kue Kering</p>
-                        <a href="https://wa.me/6285213373859?text=Assalamualaikum%2C%20saya%20ingin%20memesan%20Rice%20Putri%20Salju%20Keju" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Pesan Melalui WA</a>
+                        <a href="https://wa.me/6285213373859?text=Assalamualaikum%2C%20saya%20ingin%20memesan%20Rice%20Putri%20Salju%20Keju"
+                            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Pesan Melalui
+                            WA</a>
                     </div>
                 </div>
                 <div class="bg-white shadow-md rounded-lg overflow-hidden" data-aos="fade-right">
                     <div class="w-full aspect-w-1 aspect-h-1">
-                        <img src="./asset/product/sagu_keju.png" alt="Product 3" class="object-cover w-full h-full">
+                        <img src="./asset/product/sagu_keju.png" alt="Product 3" class="object-cover w-full h-full" />
                     </div>
                     <div class="p-4">
                         <h3 class="text-2xl font-bold mb-2">Sagu Keju</h3>
                         <p class="text-gray-700 mb-4">Kue Kering</p>
-                        <a href="https://wa.me/6285213373859?text=Assalamualaikum%2C%20saya%20ingin%20memesan%20Rice%20Sagu%20Keju" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Pesan Melalui WA</a>
+                        <a href="https://wa.me/6285213373859?text=Assalamualaikum%2C%20saya%20ingin%20memesan%20Rice%20Sagu%20Keju"
+                            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Pesan Melalui
+                            WA</a>
                     </div>
                 </div>
             </div>
@@ -205,53 +285,69 @@
                 <div class="swiper-container relative w-full max-w-4xl mx-auto overflow-hidden" data-aos="fade-right">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <img src="./asset/dokumentasi/0cfa5516.jpg" alt="Documentation 1" class="w-full max-h-svh image-to-load object-cover">
+                            <img src="./asset/dokumentasi/0cfa5516.jpg" alt="Documentation 1"
+                                class="w-full max-h-svh image-to-load object-cover" />
                         </div>
                         <div class="swiper-slide">
-                            <img src="./asset/dokumentasi/1e7c7782.jpg" alt="Documentation 2" class="w-full max-h-svh image-to-load object-cover">
+                            <img src="./asset/dokumentasi/1e7c7782.jpg" alt="Documentation 2"
+                                class="w-full max-h-svh image-to-load object-cover" />
                         </div>
                         <div class="swiper-slide">
-                            <img src="./asset/dokumentasi/f687cc3b.jpg" alt="Documentation 3" class="w-full max-h-svh image-to-load object-cover">
+                            <img src="./asset/dokumentasi/f687cc3b.jpg" alt="Documentation 3"
+                                class="w-full max-h-svh image-to-load object-cover" />
                         </div>
                         <div class="swiper-slide">
-                            <img src="./asset/dokumentasi/a5a9e834.jpg" alt="Documentation 3" class="w-full max-h-svh image-to-load object-cover">
+                            <img src="./asset/dokumentasi/a5a9e834.jpg" alt="Documentation 3"
+                                class="w-full max-h-svh image-to-load object-cover" />
                         </div>
                         <div class="swiper-slide">
-                            <img src="./asset/dokumentasi/image-065.jpg" alt="Documentation 3" class="w-full max-h-svh image-to-load object-cover">
+                            <img src="./asset/dokumentasi/image-065.jpg" alt="Documentation 3"
+                                class="w-full max-h-svh image-to-load object-cover" />
                         </div>
                         <div class="swiper-slide">
-                            <img src="./asset/dokumentasi/image-079.jpg" alt="Documentation 3" class="w-full max-h-svh image-to-load object-cover">
+                            <img src="./asset/dokumentasi/image-079.jpg" alt="Documentation 3"
+                                class="w-full max-h-svh image-to-load object-cover" />
                         </div>
                         <div class="swiper-slide">
-                            <img src="./asset/dokumentasi/image-083.jpg" alt="Documentation 3" class="w-full max-h-svh image-to-load object-cover">
+                            <img src="./asset/dokumentasi/image-083.jpg" alt="Documentation 3"
+                                class="w-full max-h-svh image-to-load object-cover" />
                         </div>
                         <div class="swiper-slide">
-                            <img src="./asset/dokumentasi/image-098.jpg" alt="Documentation 3" class="w-full max-h-svh image-to-load object-cover">
+                            <img src="./asset/dokumentasi/image-098.jpg" alt="Documentation 3"
+                                class="w-full max-h-svh image-to-load object-cover" />
                         </div>
                         <div class="swiper-slide">
-                            <img src="./asset/dokumentasi/image-190.jpg" alt="Documentation 3" class="w-full max-h-svh image-to-load object-cover">
+                            <img src="./asset/dokumentasi/image-190.jpg" alt="Documentation 3"
+                                class="w-full max-h-svh image-to-load object-cover" />
                         </div>
                         <div class="swiper-slide">
-                            <img src="./asset/dokumentasi/image-214.jpg" alt="Documentation 3" class="w-full max-h-svh image-to-load object-cover">
+                            <img src="./asset/dokumentasi/image-214.jpg" alt="Documentation 3"
+                                class="w-full max-h-svh image-to-load object-cover" />
                         </div>
                         <div class="swiper-slide">
-                            <img src="./asset/dokumentasi/image-272.jpg" alt="Documentation 3" class="w-full max-h-svh image-to-load object-cover">
+                            <img src="./asset/dokumentasi/image-272.jpg" alt="Documentation 3"
+                                class="w-full max-h-svh image-to-load object-cover" />
                         </div>
                         <div class="swiper-slide">
-                            <img src="./asset/dokumentasi/image-292.jpg" alt="Documentation 3" class="w-full max-h-svh image-to-load object-cover">
+                            <img src="./asset/dokumentasi/image-292.jpg" alt="Documentation 3"
+                                class="w-full max-h-svh image-to-load object-cover" />
                         </div>
                         <div class="swiper-slide">
-                            <img src="./asset/dokumentasi/image-321.jpg" alt="Documentation 3" class="w-full max-h-svh image-to-load object-cover">
+                            <img src="./asset/dokumentasi/image-321.jpg" alt="Documentation 3"
+                                class="w-full max-h-svh image-to-load object-cover" />
                         </div>
-                        
+
                         <div class="swiper-slide">
-                            <img src="./asset/dokumentasi/image-379.jpg" alt="Documentation 3" class="w-full max-h-svh image-to-load object-cover">
+                            <img src="./asset/dokumentasi/image-379.jpg" alt="Documentation 3"
+                                class="w-full max-h-svh image-to-load object-cover" />
                         </div>
                         <div class="swiper-slide">
-                            <img src="./asset/dokumentasi/image-381.jpg" alt="Documentation 3" class="w-full max-h-svh image-to-load object-cover">
+                            <img src="./asset/dokumentasi/image-381.jpg" alt="Documentation 3"
+                                class="w-full max-h-svh image-to-load object-cover" />
                         </div>
                         <div class="swiper-slide">
-                            <img src="./asset/dokumentasi/image-384.jpg" alt="Documentation 3" class="w-full max-h-svh image-to-load object-cover">
+                            <img src="./asset/dokumentasi/image-384.jpg" alt="Documentation 3"
+                                class="w-full max-h-svh image-to-load object-cover" />
                         </div>
                         <!-- Add more slides as needed -->
                     </div>
@@ -266,50 +362,74 @@
     </section>
 
     <!-- Parallax Section -->
-    <div class="parallax"></div>
+    <!-- <div class="parallax"></div> -->
 
     <!-- About -->
     <section class="py-16 bg-white container" id="about" data-aos="fade-right">
         <div class="container mx-auto px-4">
             <h2 class="text-4xl font-bold mb-8 text-center">Tentang Kami</h2>
             <p class="text-lg text-center leading-relaxed text-gray-700">
-                Zayyan Homemade dikelola oleh Nurhasni, S.T dan Abdul Syukur, S.Kom, berdiri pada tanggal 30 Agustus 2019 berdasarkan perizinan NIB (Nomor Induk Berusaha) Nomor : 9120312140562 tanggal 6 November 2019. Kemudian diperbaharui kembali menjadi PT Perseorangan dengan nama PT Zayyan Askar Utama dikeluarkan oleh Kementerian Hukum dan Hak Asasi Manusia Republik Indonesia dengan nomor : AHU-014012.AH.01.30. Tahun 2022. Produk-produk yang dihasilkan terbuat dari bahan alami tanpa pengawet, tanpa penyedap (MSG) dan tanpa pewarna buatan
+                Zayyan Homemade dikelola oleh Nurhasni, S.T dan Abdul Syukur, S.Kom,
+                berdiri pada tanggal 30 Agustus 2019 berdasarkan perizinan NIB (Nomor
+                Induk Berusaha) Nomor : 9120312140562 tanggal 6 November 2019.
+                Kemudian diperbaharui kembali menjadi PT Perseorangan dengan nama PT
+                Zayyan Askar Utama dikeluarkan oleh Kementerian Hukum dan Hak Asasi
+                Manusia Republik Indonesia dengan nomor : AHU-014012.AH.01.30. Tahun
+                2022. Produk-produk yang dihasilkan terbuat dari bahan alami tanpa
+                pengawet, tanpa penyedap (MSG) dan tanpa pewarna buatan
             </p>
         </div>
         <div class="max-w-sm grid grid-cols-2 gap-8 p-4 mx-auto">
             <!-- Logo Halal -->
-            <div class="hover-effect border border-gray-300 rounded-lg p-4 bg-white transition transform duration-300 ease-in-out">
-              <img src="./asset/img/halal.jpg" alt="Logo Halal" class="w-full h-auto object-contain">
+            <div
+                class="hover-effect border border-gray-300 rounded-lg p-4 bg-white transition transform duration-300 ease-in-out">
+                <img src="./asset/img/halal.jpg" alt="Logo Halal" class="w-full h-auto object-contain" />
             </div>
-            
+
             <!-- Logo BPOM -->
-            <div class="hover-effect border border-gray-300 rounded-lg p-4 bg-white transition transform duration-300 ease-in-out">
-              <img src="./asset/img/badan_pom.png" alt="Logo BPOM" class="w-full h-auto object-contain">
+            <div
+                class="hover-effect border border-gray-300 rounded-lg p-4 bg-white transition transform duration-300 ease-in-out">
+                <img src="./asset/img/badan_pom.png" alt="Logo BPOM" class="w-full h-auto object-contain" />
             </div>
-          </div>
+        </div>
     </section>
 
     <!-- Parallax Section -->
     <!-- <div class="parallax"></div> -->
 
     <!-- Contact -->
-    <section class="container py-16 bg-gray-100 flex flex-col lg:flex-row  justify-center items-center gap-x-40" id="contact" >
-        <div class="max-w-sm flex flex-col justify-center items-center ">
-            <h2 class="text-4xl font-bold mb-8 mt-8 text-center">Lokasi Produksi</h2>
-            <iframe src="https://www.google.com/maps/embed?pb=!3m2!1sen!2sid!4v1716216102050!5m2!1sen!2sid!6m8!1m7!1s7jfYS8AwBUXgKYcyfaLscQ!2m2!1d0.4692076907236579!2d101.4143368873699!3f186.2529!4f0!5f0.7820865974627469"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="mx-auto w-full h-56"></iframe>
-            <p class="text-slate-400 font-bold text-center">Jl. Kamboja 3 No.152B RT.5/RW.3 Kelurahan Tobek Godang Kecamatan Tampan Kota Pekanbaru, Pekanbaru 28297</p>
+    <section class="container py-16 bg-gray-100 flex flex-col lg:flex-row justify-center items-center gap-x-40"
+        id="contact">
+        <div class="max-w-sm flex flex-col justify-center items-center">
+            <h2 class="text-4xl font-bold mb-8 mt-8 text-center">
+                Lokasi Produksi
+            </h2>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!3m2!1sen!2sid!4v1716216102050!5m2!1sen!2sid!6m8!1m7!1s7jfYS8AwBUXgKYcyfaLscQ!2m2!1d0.4692076907236579!2d101.4143368873699!3f186.2529!4f0!5f0.7820865974627469"
+                style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                class="mx-auto w-full h-56"></iframe>
+            <p class="text-slate-400 font-bold text-center">
+                Jl. Kamboja 3 No.152B RT.5/RW.3 Kelurahan Tobek Godang Kecamatan
+                Tampan Kota Pekanbaru, Pekanbaru 28297
+            </p>
         </div>
         <div class="px-4 flex flex-col justify-start">
             <h2 class="text-4xl font-bold mb-8 mt-8 text-center">Kontak</h2>
             <div class="flex flex-col items-center">
-                <p class="text-lg text-center leading-relaxed text-gray-700 mb-4">Hubungi kami untuk informasi lebih lanjut untuk melakukan pembelian dan kerjasama</p>
-                <a href="mailto:zayyanhomemade@gmail.com" class="text-blue-500 hover:underline">zayyanhomemade@gmail.com</a>
+                <p class="text-lg text-center leading-relaxed text-gray-700 mb-4">
+                    Hubungi kami untuk informasi lebih lanjut untuk melakukan pembelian
+                    dan kerjasama
+                </p>
+                <a href="mailto:zayyanhomemade@gmail.com"
+                    class="text-blue-500 hover:underline">zayyanhomemade@gmail.com</a>
                 <a href="https://wa.me/6285213373859" class="text-blue-500 hover:underline">+62-852-1337-3859</a>
             </div>
         </div>
     </section>
     <section class="container bg-white p-10 my-10 rounded-xl shadow-xl max-w-lg w-full">
-        <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Sosial Media</h2>
+        <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">
+            Sosial Media
+        </h2>
         <div class="space-y-5">
             <!-- <a href="mailto:zayyanhomemade@gmail.com" class="flex items-center p-4 bg-slate-300 text-black hover:text-white rounded-lg shadow-inner hover:shadow-md hover:bg-blue-700 transition duration-300">
                 <i class="fas fa-envelope fa-lg mr-4"></i>
@@ -319,37 +439,45 @@
                 <i class="fab fa-whatsapp fa-lg mr-4"></i>
                 <span class="text-lg">WhatsApp</span>
             </a> -->
-            <a href="https://www.instagram.com/zayyanhomemade/" class="flex items-center p-4 bg-slate-300 text-black hover:text-white rounded-lg shadow-inner hover:shadow-md hover:bg-pink-600 transition duration-300">
+            <a href="https://www.instagram.com/zayyanhomemade/"
+                class="flex items-center p-4 bg-slate-300 text-black hover:text-white rounded-lg shadow-inner hover:shadow-md hover:bg-pink-600 transition duration-300">
                 <i class="fab fa-instagram fa-lg mr-4"></i>
                 <span class="text-lg">Instagram</span>
             </a>
-            <a href="https://www.facebook.com/zayyanhomemade" class="flex items-center p-4 bg-slate-300 text-black hover:text-white rounded-lg shadow-inner hover:shadow-md hover:bg-blue-900 transition duration-300">
+            <a href="https://www.facebook.com/zayyanhomemade"
+                class="flex items-center p-4 bg-slate-300 text-black hover:text-white rounded-lg shadow-inner hover:shadow-md hover:bg-blue-900 transition duration-300">
                 <i class="fab fa-facebook fa-lg mr-4"></i>
                 <span class="text-lg">Facebook</span>
             </a>
-            <a href="https://www.youtube.com/@Zayyanhomemade" class="flex items-center p-4 bg-slate-300 text-black hover:text-white rounded-lg shadow-inner hover:shadow-md hover:bg-red-600 transition duration-300">
+            <a href="https://www.youtube.com/@Zayyanhomemade"
+                class="flex items-center p-4 bg-slate-300 text-black hover:text-white rounded-lg shadow-inner hover:shadow-md hover:bg-red-600 transition duration-300">
                 <i class="fa-brands fa-youtube fa-fw mr-4"></i>
                 <span class="text-lg">Youtube</span>
             </a>
-            <a href="#" class="flex items-center p-4 bg-slate-300 text-black hover:text-white rounded-lg shadow-inner hover:shadow-md hover:bg-green-600 transition duration-300">
+            <a href="https://gofood.link/a/LZHvEJd"
+                class="flex items-center p-4 bg-slate-300 text-black hover:text-white rounded-lg shadow-inner hover:shadow-md hover:bg-green-600 transition duration-300">
                 <i class="fa-solid fa-shop mr-4"></i>
                 <span class="text-lg">Order on GoFood</span>
             </a>
-            <a href="#" class="flex items-center p-4 bg-slate-300 text-black hover:text-white rounded-lg shadow-inner hover:shadow-md hover:bg-yellow-600 transition duration-300">
+            <a href="#"
+                class="flex items-center p-4 bg-slate-300 text-black hover:text-white rounded-lg shadow-inner hover:shadow-md hover:bg-yellow-600 transition duration-300">
                 <i class="fa-solid fa-shop mr-4"></i>
                 <span class="text-lg">Order on GrabFood</span>
             </a>
         </div>
     </section>
-    
-    
+    <div class="fixed bottom-0 right-0 mb-4 mr-4 p-4 bg-green-700 text-white rounded-full shadow-lg">
+        <a href="">
+            <img src="./asset/img/wa.svg" alt="" />
+        </a>
+    </div>
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-8">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <a href="#" class="text-2xl font-bold mb-4 md:mb-0">Zayyan HomeMade</a>
-                <div class="space-x-4">
+                <div class="flex flex-col-reverse justify-center items-center sm:gap-6 sm:flex-row">
                     <a href="#header" class="hover:text-blue-500">Home</a>
                     <a href="#products" class="hover:text-blue-500">Produk</a>
                     <a href="#about" class="hover:text-blue-500">Tentang Kami</a>
@@ -363,4 +491,5 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./src/js/script.js"></script>
 </body>
+
 </html>
